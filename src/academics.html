@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noble Heights School</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+
+<body class="bg-gray-900 text-gray-100 font-['poppins']">
+
+    <div class="bg-gray-700 flex flex-col md:flex-row items-center justify-between px-4 md:px-6 py-3 md:py-4 sticky top-0 z-50 text-white gap-3 md:gap-0">
+
+        <div class="flex items-center gap-1 flex-wrap justify-center md:justify-start">
+            <i class="fa-solid fa-mobile-screen-button text-yellow-500 text-[1.2rem] md:text-[1.35rem] md:ml-6"></i>
+            <span class="text-base md:text-xl text-white">+92 21 36900000</span>
+
+            <div class="h-5 md:h-6 w-px bg-gray-400 mx-2"></div>
+
+            <i class="fa-solid fa-envelope text-yellow-500 text-[1.2rem] md:text-[1.35rem] font-semibold"></i>
+            <span class="text-base md:text-xl">Info@gmail.com</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-6 pl-10 lg:pl-40 text-xl ml-5 lg:ml-20">
+            <a class="flex mr-3 hover:text-yellow-400 transition" href="guidelines.html">Guideline & Policies</a>
+            <div class="h-8 w-px bg-gray-400 mx-2 ml-5 mr-6"></div>
+            <a class="hover:text-yellow-400 transition" href="admissions.html">Online Admission</a>
+        </div>
+
+        <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4 md:gap-12 md:pr-12 lg:pr-36">
+            <div class="flex items-center gap-4 md:gap-6 mx-auto md:mx-0">
+                <i class="fa-brands fa-facebook text-white text-[1.35rem] hover:text-yellow-400 transition cursor-pointer"></i>
+                <i class="fa-brands fa-twitter text-white text-[1.35rem] hover:text-yellow-400 transition cursor-pointer"></i>
+                <i class="fa-brands fa-square-instagram text-white text-[1.35rem] hover:text-yellow-400 transition cursor-pointer"></i>
+            </div>
+
+            <button onclick="window.location.href='apply.html'" class="hidden md:block bg-yellow-400 px-4 py-2 rounded-3xl border-x-lime-50 text-xl text-white hover:bg-gradient-to-r from-yellow-400 to-green-200 cursor-pointer transition font-semibold">
+                Apply Now
+            </button>
+        </div>
+    </div>
+
+    <nav class="z-40 bg-gray-50 relative w-full h-[12vh] md:h-[10vh] flex items-center justify-between py-4 shadow-md text-black px-4 md:px-10 overflow-visible">
+
+        <img src="./nb7.png" alt="Logo" class="w-[7rem] h-[4.5rem] md:w-[9rem] md:h-[6rem] rounded-xl object-contain shadow-sm">
+
+        <ul class="hidden md:flex gap-4 lg:gap-10 font-medium items-center justify-between mx-auto text-xl lg:text-2xl font-['poppins','sans-serif']">
+            <li class="hover:text-yellow-700 transition"><a href="index.html">Home</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="about.html">About</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="academics.html">Academics</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="facilities.html">Facilities</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+
+        <button onclick="
+            const drawer = document.getElementById('mobileDropdownDrawer');
+            const icon = document.getElementById('hamburgerIcon');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                drawer.style.setProperty('display', 'flex', 'important');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                drawer.classList.add('hidden');
+                drawer.style.setProperty('display', 'none', 'important');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }" class="md:hidden text-black focus:outline-none cursor-pointer p-2 rounded hover:bg-gray-200 transition relative z-50">
+            <i id="hamburgerIcon" class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <div id="mobileDropdownDrawer" class="hidden absolute top-full left-0 w-full bg-gray-50 border-t border-gray-200 shadow-xl flex-col p-5 space-y-4 font-medium text-lg z-[999] text-left">
+            <a href="index.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Home</a>
+            <a href="about.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">About</a>
+            <a href="academics.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Academics</a>
+            <a href="facilities.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Facilities</a>
+            <a href="contact-us.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Contact Us</a>
+
+            <div class="border-t border-gray-200 my-2 pt-2">
+                <a href="guidelines.html" class="block py-1.5 px-3 text-sm text-gray-600 hover:text-black">Guideline & Policies</a>
+                <a href="admissions.html" class="block py-1.5 px-3 text-sm text-gray-600 hover:text-black">Online Admission</a>
+            </div>
+
+            <div class="pt-2">
+                <button onclick="window.location.href='apply.html'" class="w-full text-center bg-yellow-400 py-3 rounded-xl text-white text-base font-bold shadow-md hover:bg-gradient-to-r from-yellow-400 to-green-300 transition cursor-pointer">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <!--Academic Header Section-->
+    <section class="relative py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Academic Excellence</h1>
+
+        </div>
+
+    </section>
+    <!-- Curriculum Overview -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Curriculum</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        At Noble Heights, we follow an integrated curriculum that blends international standards with local requirements. Our approach focuses on critical thinking, creativity, and character building.
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span> Science, Technology, Engineering, and Math (STEM) focus
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span> Language Arts and Multilingual Proficiency
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span> Physical Education and Arts Integration
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="h-48 bg-blue-200 rounded-lg"></div>
+                    <div class="h-48 bg-blue-300 rounded-lg mt-8"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- School Levels Grid -->
+    <section class="py-16 bg-white">
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Learning Stages</h2>
+                <p class="text-gray-500 mt-2">Tailored education for every Noble Heghts</p>
+            </div>
+        </div>
+
+
+        <!-- Primary School -->
+        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-full aspect-[2/1] mb-6 overflow-hidden rounded-lg bg-green-300">
+                <img src="./class4.png" alt="Primary School" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-300">Primary School</h3>
+            <p class="text-gray-600 text-xl">Focusing on foundational literacy, numeracy, and social-emotional development.</p>
+            <!-- Hidden Details: Primary -->
+            <div id="details-primary" class="hidden mb-6 space-y-3 border-t pt-4 border-blue-50">
+                <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wider">Key Focus Areas:</h4>
+                <ul class="text-gray-600 text-base space-y-2">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Basic Literacy & Phonics</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Number Sense & Logic</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Arts & Creative Play</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleCurriculum('details-primary', this)" class="flex items-center text-blue-600 font-extrabold text-sm uppercase tracking-widest outline-none group/btn">
+            <span class="btn-text">Explore Curriculum</span>
+            <svg class="h-5 w-5 ml-2 transition-transform duration-300 arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        </div>
+
+        </div>
+        </div>
+
+        <!-- Middle School Card -->
+        <div class="p-8 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-full aspect-[2/1] mb-6 overflow-hidden rounded-lg bg-gray-200">
+                <img src="./middle.png" alt="Middle School" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            </div>
+            <h2 class="text-2xl text-gray-200 font-bold mb-3">Middle School</h2>
+
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                Encouraging independent thinking and deeper subject exploration. Our middle school program bridges the gap between foundational learning and advanced reasoning, empowering students to question, analyze, and innovate in a collaborative environment.
+            </p>
+
+
+            <!-- Hidden Details: Middle -->
+            <div id="details-middle" class="hidden mb-6 space-y-3 border-t pt-4 border-blue-50">
+                <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wider">Core Subjects:</h4>
+                <ul class="text-gray-600 text-base space-y-2">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Integrated Science & Math</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> History & Global Studies</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Digital Literacy</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleCurriculum('details-middle', this)" class="flex items-center text-blue-600 font-extrabold text-sm uppercase tracking-widest outline-none group/btn">
+            <span class="btn-text">Explore Curriculum</span>
+            <svg class="h-5 w-5 ml-2 transition-transform duration-300 arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        </div>
+        <!-- Senior School -->
+        <div class="p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-full aspect-[2/1] mb-6 overflow-hidden rounded-lg bg-green-300">
+                <img src="./senior school.png" alt="" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-300">Senior School</h3>
+            <p class="text-gray-600 text-xl">Preparing students for higher education and professional careers with specialized exam preparation.</p>
+
+            <!-- Hidden Details: Senior -->
+            <div id="details-senior" class="hidden mb-6 space-y-3 border-t pt-4 border-blue-50">
+                <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wider">Specializations:</h4>
+                <ul class="text-gray-600 text-base space-y-2">
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Pre-Engineering & Medical</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Computer Science</li>
+                    <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Career Counseling</li>
+                </ul>
+            </div>
+            <section class="bg-gray-50 py-16 px-6 md:px-12 lg:px-24">
+                <div class="max-w-7xl mx-auto">
+
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Curriculum Overview</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            Our comprehensive academic programs are designed to foster intellectual growth, critical thinking, and practical skills across all learning stages.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                        <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                            <div class="bg-blue-600 p-4 text-white font-semibold text-lg text-center">
+                                Primary School (Grade 1 - 5)
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 text-sm mb-4">Focuses on foundational literacy, numeracy, and social skills through interactive learning.</p>
+                                <h4 class="font-semibold text-slate-700 mb-2 text-sm uppercase tracking-wider">Core Subjects:</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> English Language Arts</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Mathematics</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> General Science</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                            <div class="bg-slate-700 p-4 text-white font-semibold text-lg text-center">
+                                Middle School (Grade 6 - 8)
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 text-sm mb-4">Bridging foundational concepts with advanced analytical skills and conceptual learning.</p>
+                                <h4 class="font-semibold text-slate-700 mb-2 text-sm uppercase tracking-wider">Core Subjects:</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Advanced Mathematics</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Integrated Sciences</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-slate-600 rounded-full mr-2"></span> Computer Science Intro</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition duration-300">
+                            <div class="bg-amber-500 p-4 text-white font-semibold text-lg text-center">
+                                Senior School (Grade 9 - 12)
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 text-sm mb-4">Specialized streams preparing students for higher education and competitive board exams.</p>
+                                <h4 class="font-semibold text-slate-700 mb-2 text-sm uppercase tracking-wider">Available Streams:</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> Pre-Medical</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> Pre-Engineering</li>
+                                    <li class="flex items-center"><span class="w-2 h-2 bg-amber-500 rounded-full mr-2"></span> Computer Science</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <button onclick="toggleCurriculum('details-senior', this)" class="flex items-center text-blue-600 font-extrabold text-sm uppercase tracking-widest outline-none group/btn">
+            <span class="btn-text">Explore Curriculum</span>
+            <svg class="h-5 w-5 ml-2 transition-transform duration-300 arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-blue-800 pb-12">
+
+            <!-- Column 1: School Identity -->
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold tracking-tighter">NOBLE<span class="text-blue-400">HEIGHTS</span></h3>
+                <p class="text-blue-200 text-sm leading-relaxed">
+                    Nurturing future leaders with excellence in academics and character building since 1996.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="font-bold text-lg mb-6">Quick Navigation</h4>
+                <ul class="space-y-3 text-blue-200 text-sm">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Noble Heights</a></li>
+                    <li><a href="academics.html" class="hover:text-white transition-colors">Academic Programs</a></li>
+                    <li><a href="admissions.html" class="hover:text-white transition-colors">Online Admission</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Academics Specific -->
+            <div>
+                <h4 class="font-bold text-lg mb-6">Learning Stages</h4>
+                <ul class="space-y-3 text-blue-200 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Primary School</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Middle School</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Senior School</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact & Location -->
+            <div>
+                <h4 class="font-bold text-lg mb-6">Get In Touch</h4>
+                <p class="text-blue-200 text-sm mb-2">Main Campus, Street 12, Sector A</p>
+                <p class="text-blue-200 text-sm mb-2">Phone: +92 300 1234567</p>
+                <p class="text-blue-200 text-sm underline cursor-pointer">info@nobleheights.edu.pk</p>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Bar -->
+        <div class="max-w-7xl mx-auto px-4 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-blue-300 text-xs">
+            <p>© 2026 Noble Heights School. Developed by <span class="text-white">Saddiqa Saeed</span>.</p>
+            <ul>
+                <div class="flex space-x-6">
+                    <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white">Terms of Service</a></li>
+                </div>
+        </div>
+        </ul>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- Essential JavaScript Logic -->
+    <script>
+        function toggleCurriculum(id, btn) {
+            const detailBox = document.getElementById(id);
+            const textSpan = btn.querySelector('.btn-text');
+            const arrow = btn.querySelector('.arrow-icon');
+
+            if (detailBox.classList.contains('hidden')) {
+                detailBox.classList.remove('hidden');
+                textSpan.innerText = "Close Details";
+                arrow.style.transform = "rotate(180deg)";
+            } else {
+                detailBox.classList.add('hidden');
+                textSpan.innerText = "Explore Curriculum";
+                arrow.style.transform = "rotate(0deg)";
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
