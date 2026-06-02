@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noble Heights School</title>
     <link href="./output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
-<body class="bg-gray-900 text-gray-100 font-['poppins']">
+<body class="bg-gray-900 text-gray-100 font-['poppins'] flex flex-col min-h-screen">
 
     <div class="bg-gray-700 flex flex-col md:flex-row items-center justify-between px-4 md:px-6 py-3 md:py-4 sticky top-0 z-50 text-white gap-3 md:gap-0">
         <div class="flex items-center gap-1 flex-wrap justify-center md:justify-start">
@@ -139,8 +139,8 @@
                                 <span>Syllabus 2026</span>
                             </a>
                             <button onclick="printDocument('syllabus')" class="cursor-pointer text-slate-400 hover:text-white pl-2 border-l border-slate-600 transition" title="Print Layout">
-            <i class="fa-solid fa-print"></i>
-        </button>
+                                <i class="fa-solid fa-print"></i>
+                            </button>
                         </div>
 
                         <div class="flex items-center justify-between bg-slate-700 hover:bg-slate-600 text-slate-200 px-3 py-2 rounded-lg text-xs font-semibold transition border border-slate-600">
@@ -184,101 +184,92 @@
             &copy; 2026 Noble Heights School. Built with <i class="fa-solid fa-heart text-red-500 mx-0.5"></i> for Education.
         </div>
     </footer>
+
     <script>
+        // Hamburger Menu Toggle Function
+        function toggleNavbarMenu() {
+            const drawer = document.getElementById('mobileDropdownDrawer');
+            const icon = document.getElementById('hamburgerIcon');
+
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                drawer.classList.add('flex');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                drawer.classList.remove('flex');
+                drawer.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // PDF / Print Function
         function printDocument(docType) {
             let title = "";
             let contentHtml = "";
 
             if (docType === 'syllabus') {
                 title = "Noble Heights School - Syllabus 2026";
-
                 contentHtml = `
-            <div class="max-w-3xl mx-auto p-6 text-gray-800">
-                <div class="text-center border-b-4 border-blue-800 pb-4 mb-6">
-                    <h1 class="text-2xl font-bold text-blue-900">Noble Heights School</h1>
-                    <p class="text-sm text-gray-600">Annual Examination Syllabus 2026</p>
-                </div>
-
-                <div class="mb-6">
-                    <h2 class="bg-blue-900 text-white px-3 py-2 inline-block rounded">Class 9</h2>
-
-                    <div class="mt-4 p-4 border-l-4 border-blue-500 bg-gray-50">
-                        <h3 class="font-bold">English</h3>
-                        <p>Chapters 1–6, Grammar basics, Voice, Narration</p>
+                <div class="max-w-3xl mx-auto p-6 text-gray-800">
+                    <div class="text-center border-b-4 border-blue-800 pb-4 mb-6">
+                        <h1 class="text-2xl font-bold text-blue-900">Noble Heights School</h1>
+                        <p class="text-sm text-gray-600">Annual Examination Syllabus 2026</p>
                     </div>
-
-                    <div class="mt-4 p-4 border-l-4 border-green-500 bg-gray-50">
-                        <h3 class="font-bold">Mathematics</h3>
-                        <p>Algebra, Matrices, Geometry basics</p>
+                    <div class="mb-6">
+                        <h2 class="bg-blue-900 text-white px-3 py-2 inline-block rounded">Class 9</h2>
+                        <div class="mt-4 p-4 border-l-4 border-blue-500 bg-gray-50">
+                            <h3 class="font-bold">English</h3>
+                            <p>Chapters 1–6, Grammar basics, Voice, Narration</p>
+                        </div>
+                        <div class="mt-4 p-4 border-l-4 border-green-500 bg-gray-50">
+                            <h3 class="font-bold">Mathematics</h3>
+                            <p>Algebra, Matrices, Geometry basics</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            `
-            };
-
-        } else if (docType === 'datesheet') {
-            title = "Mid Term Date Sheet";
-            contentHtml = `
-            <div class="p-6 text-center">
-                <h2 class="text-xl font-bold">Mid Term Date Sheet</h2>
-                <p>Coming Soon...</p>
-            </div>`;
-        } else if (docType === 'challan') {
-            title = "Fee Challan Form";
-            contentHtml = `
-            <div class="p-6 text-center">
-                <h2 class="text-xl font-bold">Fee Challan</h2>
-                <p>Coming Soon...</p>
-            </div>`;
-        }
-
-        // remove old iframe if exists
-        const oldFrame = document.getElementById('print-iframe');
-        if (oldFrame) oldFrame.remove();
-
-        // create iframe
-        const iframe = document.createElement('iframe');
-        iframe.id = 'print-iframe';
-        iframe.style.position = 'absolute';
-        iframe.style.top = '-9999px';
-        iframe.style.left = '-9999px';
-        iframe.style.width = '0';
-        iframe.style.height = '0';
-        iframe.style.border = 'none';
-
-        document.body.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-
-        const htmlContent = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>${title}</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-            <!-- Tailwind CDN for print preview -->
-          
-  <link href="./output.css" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background: white;
-        }
-        
-        @media print {
-            body {
-                font-size: 12px;
+                </div>`;
+            } else if (docType === 'datesheet') {
+                title = "Mid Term Date Sheet";
+                contentHtml = `
+                <div class="p-6 text-center">
+                    <h2 class="text-xl font-bold">Mid Term Date Sheet</h2>
+                    <p>Coming Soon...</p>
+                </div>`;
+            } else if (docType === 'challan') {
+                title = "Fee Challan Form";
+                contentHtml = `
+                <div class="p-6 text-center">
+                    <h2 class="text-xl font-bold">Fee Challan</h2>
+                    <p>Coming Soon...</p>
+                </div>`;
             }
-        }
-    
-    </style>
-    </head>
 
-    <body>
-        ${contentHtml}
-        <script>
-            </body> 
-            </html>
+            const oldFrame = document.getElementById('print-iframe');
+            if (oldFrame) oldFrame.remove();
+
+            const iframe = document.createElement('iframe');
+            iframe.id = 'print-iframe';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '-9999px';
+            iframe.style.left = '-9999px';
+            iframe.style.width = '0';
+            iframe.style.height = '0';
+            iframe.style.border = 'none';
+
+            document.body.appendChild(iframe);
+
+            const doc = iframe.contentWindow.document;
+            doc.open();
+            doc.write('<!DOCTYPE html><html><head><title>' + title + '</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="./output.css" rel="stylesheet"><style>body { margin: 0; padding: 20px; background: white; } @media print { body { font-size: 12px; } }</style></head><body>' + contentHtml + '<\/body><\/html>');
+            doc.close();
+
+            setTimeout(() => {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>
