@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noble Heights School</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-['poppins']">
+
+    <div class="bg-gray-700 flex flex-col md:flex-row items-center justify-between px-4 md:px-6 py-3 md:py-4 sticky top-0 z-50 text-white gap-3 md:gap-0">
+
+        <div class="flex items-center gap-1 flex-wrap justify-center md:justify-start">
+            <i class="fa-solid fa-mobile-screen-button text-yellow-500 text-[1.2rem] md:text-[1.35rem] md:ml-6"></i>
+            <span class="text-base md:text-xl text-white">+92 3336793181</span>
+
+            <div class="h-5 md:h-6 w-px bg-gray-400 mx-2"></div>
+
+            <i class="fa-solid fa-envelope text-yellow-500 text-[1.2rem] md:text-[1.35rem] font-semibold"></i>
+            <span class="text-base md:text-xl">Info@gmail.com</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-6 pl-10 lg:pl-40 text-xl ml-5 lg:ml-20">
+            <a class="flex mr-3 hover:text-yellow-400 transition" href="guidelines.html">Guideline & Policies</a>
+            <div class="h-8 w-px bg-gray-400 mx-2 ml-5 mr-6"></div>
+            <a class="hover:text-yellow-400 transition" href="admissions.html">Online Admission</a>
+        </div>
+
+        <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4 md:gap-12 md:pr-12 lg:pr-36">
+            <div class="flex items-center gap-4 md:gap-6 mx-auto md:mx-0">
+                <i class="fa-brands fa-facebook text-white text-[1.35rem] hover:text-yellow-400 transition cursor-pointer"></i>
+                <i class="fa-brands fa-twitter text-white text-[1.35rem] hover:text-yellow-400 transition cursor-pointer"></i>
+                <i class="fa-brands fa-square-instagram text-white text-[1.35rem] hover:text-yellow-400 transition cursor-pointer"></i>
+            </div>
+
+            <button onclick="window.location.href='apply.html'" class="hidden md:block bg-yellow-400 px-4 py-2 rounded-3xl border-x-lime-50 text-xl text-white hover:bg-gradient-to-r from-yellow-400 to-green-200 cursor-pointer transition font-semibold">
+                Apply Now
+            </button>
+        </div>
+    </div>
+
+    <nav class="z-40 bg-gray-50 relative w-full h-[12vh] md:h-[10vh] flex items-center justify-between py-4 shadow-md text-black px-4 md:px-10 overflow-visible">
+
+        <img src="/nb7.png" alt="Logo" class="w-[7rem] h-[4.5rem] md:w-[9rem] md:h-[6rem] rounded-xl object-contain shadow-sm">
+
+        <ul class="hidden md:flex gap-4 lg:gap-10 font-medium items-center justify-between mx-auto text-xl lg:text-2xl font-['poppins','sans-serif']">
+            <li class="hover:text-yellow-700 transition"><a href="index.html">Home</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="about.html">About</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="academics.html">Academics</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="facilities.html">Facilities</a></li>
+            <div class="h-8 w-px bg-gray-300 mx-1"></div>
+
+            <li class="hover:text-yellow-700 transition"><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+
+        <button onclick="
+            const drawer = document.getElementById('mobileDropdownDrawer');
+            const icon = document.getElementById('hamburgerIcon');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                drawer.style.setProperty('display', 'flex', 'important');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                drawer.classList.add('hidden');
+                drawer.style.setProperty('display', 'none', 'important');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }" class="md:hidden text-black focus:outline-none cursor-pointer p-2 rounded hover:bg-gray-200 transition relative z-50">
+            <i id="hamburgerIcon" class="fa-solid fa-bars text-2xl"></i>
+        </button>
+
+        <div id="mobileDropdownDrawer" class="hidden absolute top-full left-0 w-full bg-gray-50 border-t border-gray-200 shadow-xl flex-col p-5 space-y-4 font-medium text-lg z-[999] text-left">
+            <a href="index.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Home</a>
+            <a href="about.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">About</a>
+            <a href="academics.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Academics</a>
+            <a href="facilities.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Facilities</a>
+            <a href="contact-us.html" class="block py-2 px-3 hover:bg-gray-100 rounded-lg transition hover:text-yellow-700">Contact Us</a>
+
+            <div class="border-t border-gray-200 my-2 pt-2">
+                <a href="guidelines.html" class="block py-1.5 px-3 text-sm text-gray-600 hover:text-black">Guideline & Policies</a>
+                <a href="admissions.html" class="block py-1.5 px-3 text-sm text-gray-600 hover:text-black">Online Admission</a>
+            </div>
+
+            <div class="pt-2">
+                <button onclick="window.location.href='apply.html'" class="w-full text-center bg-yellow-400 py-3 rounded-xl text-white text-base font-bold shadow-md hover:bg-gradient-to-r from-yellow-400 to-green-300 transition cursor-pointer">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-left mb-16 border-l-8 border-yellow-400 pl-6">
+                <h2 class="text-4xl font-black text-blue-900 uppercase">Campus Facilities</h2>
+                <p class="text-gray-500 mt-2 text-lg">Exploring the infrastructure of Noble Heights</p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                <!-- Large Card: Library (Occupies 7 columns) -->
+                <div class="md:col-span-7 relative group overflow-hidden rounded-3xl h-[400px] shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Library">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/20 to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-white text-3xl font-bold">Central Library</h3>
+                        <p class="text-blue-100 mt-2 max-w-md text-sm">Over 15,000 books and digital archives to foster a deep love for reading and independent research.</p>
+                    </div>
+                </div>
+
+                <!-- Medium Card: Science Lab (Occupies 5 columns) -->
+                <div class="md:col-span-5 relative group overflow-hidden rounded-3xl h-[400px] shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Science Lab">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-white text-2xl font-bold">Advanced Labs</h3>
+                        <p class="text-gray-200 mt-2 text-sm">State-of-the-art Physics and Chemistry labs for hands-on experimentation.</p>
+                    </div>
+                </div>
+
+                <!-- Medium Card: Sports (Occupies 5 columns) -->
+                <div class="md:col-span-5 relative group overflow-hidden rounded-3xl h-[400px] shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Sports">
+                    <div class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-transparent to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-white text-2xl font-bold">Sports Grounds</h3>
+                        <p class="text-green-100 mt-2 text-sm">Professional coaching for Football, Cricket, and Basketball.</p>
+                    </div>
+                </div>
+
+                <!-- Large Card: IT Lab (Occupies 7 columns) -->
+                <div class="md:col-span-7 relative group overflow-hidden rounded-3xl h-[400px] shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="IT Lab">
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-transparent to-transparent p-8 flex flex-col justify-end">
+                        <h3 class="text-white text-3xl font-bold">IT Innovation Hub</h3>
+                        <p class="text-purple-100 mt-2 max-w-md text-sm">Equipped with the latest technology and high-speed internet to prepare students for a digital world.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <!-- Column 1: School Identity -->
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-black italic tracking-tighter">NOBLE HEIGHTS</h2>
+                    <p class="text-blue-200 text-sm leading-relaxed">
+                        Nurturing minds and building futures since 1996. We provide a world-class education environment for the leaders of tomorrow.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-yellow-500 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-yellow-500 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-yellow-500 transition-colors"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b-2 border-yellow-500 inline-block">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-blue-200">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Our School</a></li>
+                        <li><a href="academics.html" class="hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition block py-0.5">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Important Sections -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b-2 border-yellow-500 inline-block">Resources</h4>
+                    <ul class="space-y-4 text-sm text-blue-200">
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="admissions.html" class="hover:text-white transition-colors">Admissions Guide</a></li>
+                        <li><a href="portal.html" class="hover:text-white transition-colors">Student Portal</a></li>
+                        <li><a href="athletics.html" class="hover:underline">Athletics & Arts Facilities</a></li>
+
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 border-b-2 border-yellow-500 inline-block">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-blue-200">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-yellow-500"></i>
+                            <span>Main Satellite Town, Block C, Rawalpindi, Pakistan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-yellow-500"></i>
+                            <span>+92 21 36900000</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-yellow-500"></i>
+                            <span>info@nobleheights.edu.pk</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-blue-800 pt-8 flex flex-col md:row justify-between items-center gap-4 text-xs text-blue-400">
+                <p>© 2026 Noble Heights School. All rights reserved.</p>
+                <p>Developed by <span class="text-white font-medium">Saddiqa Saeed</span></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleNavbarMenu() {
+            const drawer = document.getElementById('mobileDropdownDrawer');
+            const icon = document.getElementById('hamburgerIcon');
+
+            if (drawer.classList.contains('hidden')) {
+                // Dropdown open karein
+                drawer.classList.remove('hidden');
+                drawer.classList.add('flex');
+                // Icon ko 'X' close icon bana dein
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                // Dropdown close karein
+                drawer.classList.remove('flex');
+                drawer.classList.add('hidden');
+                // Icon ko wapas Hamburger lines bana dein
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+    </script>
+</body>
+
+</html>
